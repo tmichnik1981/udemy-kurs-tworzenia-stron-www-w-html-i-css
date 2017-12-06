@@ -364,4 +364,34 @@
 
 - Links
 
+  - `<a>` anchor
+    - href - url
+    - title - popup discription
+  - `<img src="http://abcsd">`
+  - '`<a href="top">` - link to  tag with a name="top"
+
+  ```html
+  <body style="background-color: rgb(255,235,205)">
+    <a name="top" href="#dol">Idź na sam dół strony</a>
+    <a href="http://videokurs.pl" title="Video Kursy Programowania i Tworzenia stron WWW">Video Kursy</a> Programowania i Tworzenia stron WWW
+    <br />
+    <a href="video-kurs-tworzenia-stron-www.html" title="Video Kurs XHTML i CSS">Xhtml i CSS</a>
+  			
+    <a href="mailto:armiksos@gmail.com">Napisz do mnie... 
+      a na pewno tego nie pożałujesz ;-)</a>
+    <br />		
+    nr gg: <a href="gg:10870365" title="Numer mojego gg :-)">10870365
+    <img border="0" src="http://status.gadu-gadu.pl/users/status.asp?
+                         id=10870365&amp;styl=3" alt="nr gg" /></a>
+  		
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <a name="5123525">POST</a>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  		
+    <a name="dol" href="#top">Idź do góry!</a>
+  </body>	
+  ```
+
+- Frames
+
 #### Instructions
