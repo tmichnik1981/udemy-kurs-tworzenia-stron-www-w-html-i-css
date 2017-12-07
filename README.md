@@ -9,6 +9,8 @@
 - [HTML symbols](https://www.w3schools.com/charsets/ref_html_symbols.asp)
 - [Validator](https://validator.w3.org/)
 - [Mime types](http://w3schools.sinsixx.com/media/media_mimeref.asp.htm)
+- [Colors and fonts](http://classic.typetester.org/)
+- [Creating custom patterns for backgrounds](http://repper.studioludens.com/)
 
 #### Notes and Commands
 
@@ -392,6 +394,274 @@
   </body>	
   ```
 
-- Frames
+- Frames (deprecated)
+
+  - `<frameset>` - group of frames
+    - cols - columns
+    - border
+    - frameborder - 0/1
+    - bordercolor
+  - `<frame>`
+    -  src - source page
+    - noresize
+  - `<noframe>` text to display if our browser cannot handle frame
+
+  ```html
+  <frameset rows="20%, *" border="0" frameborder="no">
+    <frame src="banner.html" />
+    <frameset cols="20%, *, 20%" frameborder="no" bordercolor="red">
+      <frame src="menu.html" noresize="noresize" />
+  	<frame src="video-kurs-tworzenia-stron-www.html" name="glowna_tresc" />
+  	<frame src="menu.html" noresize="noresize" />
+    </frameset>
+    <noframes>
+      <body>No niestety Twoja przeglądarka nie obsługuje ramek :(</body>
+    </noframes>
+  </frameset>
+  ```
+
+- Forms
+
+  - `<form>`
+
+    - action - place and method with which we will be sending data (http://, mailto:)
+    - method - post, get
+    - enctype - encryption type
+    - accept-charset - UTF8 
+
+  - `<input>`
+
+    - type - text, submit (submits the form), password, checkbox, radio, hidden, button
+    - name - unique within a form
+    - value - default value
+    - readonly
+    - disabled - true/false
+    - id - unique within a page
+
+  - `<label>`
+
+    - for - id of an input
+
+  - `<textarea>`
+
+    - cols
+    - rows
+    - disabled
+
+  - `<select>`
+
+    - `<option>`
+      - value
+      - multiple - multiple
+
+    ```html
+    <form action="mailto:ddiabelekk@poczta.onet.pl?subject=Ankieta" method="post"
+      enctype="text/plain" accept-charset="utf-8">
+      Imię: <input type="text" name="imie" size="10" maxlength="10" /><br />
+      Hasło: <input type="password" name="haslo" /><br />
+      <fieldset>
+        <legend>Jakie jest Twoje hobby?</legend>
+    	<input type="checkbox" name="hobby" value="plywanie" id="1" /> 
+        <label for="1">Pływanie</label> 
+    	<input type="checkbox" name="hobby" value="gry_komputerowe" id="2" /> 
+        <label for="2">Gry komputerowe </label> 
+    	<input type="checkbox" name="hobby" value="programowanie" id="3" /> 
+        <label for="3">Programowanie </label>
+      </fieldset>
+      <fieldset>
+        <legend>Do jakiej kategori wiekowej należysz?</legend>
+    	<input type="radio" name="kategoria_wiekowa" value="1-18" id="4" />
+        <label for="4">1-18</label>
+    	<input type="radio" name="kategoria_wiekowa" value="18-34" id="5" />
+        <label for="5">18-34</label>
+    	<input type="radio" name="kategoria_wiekowa" value="34+" id="6" />
+        <label for="6">34+</label>
+      </fieldset>
+      <textarea cols="20" rows="10" disabled="disabled">
+        To jest treść nie do zmienienia
+      </textarea>
+      <select name="kolory" multiple="multiple">
+        <option value="Zolty">Żółty </option>
+    	<option value="Zielony">Zielony </option>
+    	<option value="Czerwony">Czerwony </option>
+      </select>
+      <input type="file" name="plik" />
+      <input type="hidden" name="data" value="27.11.2009" />
+      <button type="submit">
+        <table>
+          <tr><td>1</td><td>2</td></tr>
+    	  <tr><td>3</td><td>4</td></tr>
+        </table>
+      </button>
+      <input type="submit" value="Wyślij" /> <!-- enctype="multipart/form-data"-->
+    </form>				
+    ```
+
+###### CSS Fundamentals
+
+- styles css
+
+  - `<style>`
+    - type = text/css
+  - ` <link href="style.css" rel="stylesheet" type="text/css" />` - attaching a css document
+
+  ```html
+  <head>	
+    <style type="text/css">
+      /*<![CDATA[*/
+  	  p b
+  	  {
+  	    color: green;
+  		font-size: 30px;
+  	  }
+  			/*]]>*/
+  	</style>
+    </head>
+    <body>
+      <!-- CSS Cascading Style Sheet -->
+      <b>To jest pogrubiony tekst</b>
+  	<p><b>To jest jakiś bardzo ciekawy tekst :-)</b></p>
+  	<p>To jest jakiś bardzo ciekawy tekst :-)</p>
+  	<p>To jest jakiś bardzo ciekawy tekst :-)</p>
+  	<p>To jest jakiś bardzo ciekawy tekst :-)</p>
+      <!-- Inline style -->
+  	<p style="color: blue;">To jest jakiś bardzo ciekawy tekst :-)</p>
+  	asd
+    </body>
+  ```
+
+- Class and Id
+
+  - `p.definicja` - select elements <p> with class "definicja"
+  - `*.definicja` - select all elements with class "definicja"
+  - `p.definicja, b.definicja` - select elements `<p>` and `<b>` with class "definicja"
+  - `h1#nazwa1` - select element `<h1>` with id=nazwa1
+
+- Div and span
+
+  - display:inline - inline/block
+  - text-align: left  - left/right/justify, works for block elements
+  - background-color: purple 
+  - `<span>` - inline tag, without styling, mainly for text
+  - `<div>` - block tag
+
+- Links
+
+  - `color:green`
+  - `text-decoration:none` - removes default links styling
+
+
+  - `a:link` - not touched link
+  - `a:visited`
+  - `a:hover` - mouse over a link
+  - `a:active`
+  - `div.menu_linki a:link, div.menu_linki a:visited` - select links (link and visited) which are inside `<div>` block with class "menu_linki"
+
+- Text formatting
+
+  - text-decoration:
+    - none - turning off
+    - underline
+    - line-through - crossed out
+    - overline
+    - inherit - inheriting from the parent element
+  - text-transform:
+    - capitalize - capitalize the first  letters 
+    - lowercase -  small letters
+    - uppercase - capital letters
+  - text-align:
+    - left
+    - right
+    - center
+    - justify
+  - word-spacing:
+  - letter-spacing: 
+  - text-indent:
+  - line-height: 140% - space between the lines
+  - white-space:
+    - normal
+    - nowrap - no wrapping
+    - pre - pre-formatted
+
+- Fonts
+
+  - `font-size: 3em`
+  - `font-family: Verdana, Geneva, Arial, Helvetica, sans-serif` - try to use "Verdana", if does not exist go to next etc
+  - `font-style: italic`
+  - `font-weight: bold`
+  -  `font-variant: small-caps` - good for titles 
+  - `font: italic small-caps bold 3em Verdana, Geneva, Arial, Helvetica, sans-serif` - everything in one line together
+
+- Backgrounds
+
+  - `background-color: black`
+  - `background-image: url('logo-video-kurs-pl.png')`
+  - `background-repeat: no-repeat` - repeat/repeat-x/repeat-y, repeatting the background image
+  - `background-position: 50% 50%` - place a backgound image 50% from the left border and 50% from the top
+  - `background-attachment: fixed` - keep a backgound image in one place
+  - `font-size: 10px`
+  - `background: black url('logo-video-kurs-pl.png') no-repeat fixed 50% 50%` - all settings in one line altogether
+
+- Borders
+
+  - `border-style: solid` - dotted/solid/dotted/groove/dashed, values for: top right bottom left
+  - `border-top-style`, `border-right-style`, `border-bottom-style`, `border-left-style`
+  - `border-width: 1px` - values for: top right bottom left ie: 1px 2px 3px 2px
+  - `border-top-width`, `border-right-width`, `border-bottom-width`, `border-left-width`
+  - `border-color: red` - values for: top right bottom left
+  - `border-top-color`, `border-right-color`, `border-bottom-color`, `border-left-color`
+  - `border: 1px solid black;` - everything in one line
+
+- Tables
+
+  ```css
+  <style type="text/css">
+    /*<![CDATA[*/
+    table.test
+    {
+      width: 100%;
+      height: 500px;
+      border: 1px dotted green;
+      border-collapse: collapse; /*looks like joined borders,  (inherit/separate/collapse) */
+    }
+  /*style for cells*/ 
+    table.test td 
+    {
+      border: 1px dotted green;
+  	padding: 10px;
+  	text-align: left;
+  	vertical-align: top; /*content aligned to the top*/
+  	background-color: blue;
+  	color: #FFCC00;
+    }
+  /*]]>*/
+  </style>
+  ```
+
+- Lists
+
+  ```css
+  <style type="text/css">
+  /*<![CDATA[*/
+    ul
+    {
+      list-style-type: square; /*disc/circle/square*/
+  	list-style-position: inside; /*inside|outside|inherit*/
+    }				
+    ol
+    {
+      list-style-type: lower-roman; /*decimal/decimal-leading-zero/lower-roman/
+      							lower-greek/lower-latin/upper-latin*/
+  	list-style-image: url('ol.gif'); /*displays gif instead of a number*/
+    }
+  /*]]>*/
+  </style>
+  ```
+
+- Mouse coursor
+
+  - `cursor:wait` - auto|crosshair|pointer|move |e-resize|ne-resize|nw-resize|n-resize|se-resize|sw-resize|s-resize|w-resize|text|wait|help|progress|copy|alias|context-menu|cell|not-allowed|col-resize|row-resize|no-drop|vertical-text|nesw-resize|nwse-resize|ns-resize|ew-resize 
+
+- Opacity 
 
 #### Instructions
