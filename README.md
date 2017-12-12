@@ -403,7 +403,7 @@
     - bordercolor
   - `<frame>`
     -  src - source page
-    -  noresize
+    - noresize
   - `<noframe>` text to display if our browser cannot handle frame
 
   ```html
@@ -552,13 +552,9 @@
 
 
   - `a:link` - not touched link
-
   - `a:visited`
-
   - `a:hover` - mouse over a link
-
   - `a:active`
-
   - `div.menu_linki a:link, div.menu_linki a:visited` - select links (link and visited) which are inside `<div>` block with class "menu_linki"
 
 - Text formatting
@@ -593,7 +589,7 @@
   - `font-family: Verdana, Geneva, Arial, Helvetica, sans-serif` - try to use "Verdana", if does not exist go to next etc
   - `font-style: italic`
   - `font-weight: bold`
-  - `font-variant: small-caps` - good for titles 
+  - `font-variant: small-caps` - good for titles
   - `font: italic small-caps bold 3em Verdana, Geneva, Arial, Helvetica, sans-serif` - everything in one line together
 
 - Backgrounds
@@ -666,9 +662,12 @@
 
   - `cursor:wait` - auto|crosshair|pointer|move |e-resize|ne-resize|nw-resize|n-resize|se-resize|sw-resize|s-resize|w-resize|text|wait|help|progress|copy|alias|context-menu|cell|not-allowed|col-resize|row-resize|no-drop|vertical-text|nesw-resize|nwse-resize|ns-resize|ew-resize 
 
-- Opacity
+- Opacity 
 
-###### Laying out pages with CSS
+  - `opacity: 0.6`
+  - `filter: alpha(opacity=60)` - opacity for Edge and FF
+
+##### Laying out pages with CSS
 
 - Margins, Box model
   - `margin: 40px` - outer, transparent
