@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="pl" />
+
+<meta name="author" content="Arkadiusz Włodarczyk" />
+<meta name="robots" content="index, follow" />
+<title>Video Kurs - Video Kursy</title>
+<meta name="description"
+	content="Video Kursy Tworzenia stron WWW oraz Video Kursy Programowania" />
+<meta name="keywords" content="video kurs, video kursy, video, kurs" />
+
+<style type="text/css">
+/*<![CDATA[*/
+* {
+	/*zeroing out*/
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("pics/background_page.jpg");
+	background-attachment: fixed;
+	/* 	
+				background-repeat: repeat-x;
+				background-color: #64646c; */
+}
+
+a {
+	color: teal;
+	text-decoration: none;
+	border-bottom: 1px dotted gray;
+}
+
+a:HOVER {
+	color: #06376C;
+}
+
+#container {
+	/*center out*/
+	margin: 0 auto;
+	/*1024 is mostly used resolution*/
+	width: 1004px;
+}
+/*UPPER PART OF A CONTAINER*/
+#upper_part_of_container {
+	position: relative;
+	margin-top: 10px;
+	background-image: url("pics/top_and_bottom.gif");
+	/*real size of the image*/
+	width: 944px;
+	height: 113px;
+	background-image: url("pics/top_and_bottom.gif");
+}
+
+#upper_part_of_container a {
+	border-bottom: 0px;
+}
+
+img.logo {
+	border: 0;
+	/*relative to its non static (position cannot be default or static) container*/
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+#contact_box {
+	position: absolute;
+	right: 40px;
+	top: 7px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	line-height: 125%;
+}
+
+/*TOP MENU*/
+#top_menu {
+	position: absolute;
+	left: 50px;
+	bottom: -1px;
+}
+
+#exact_top_menu li {
+	list-style-type: none;
+	/*lists elements will float one another*/
+	float: left;
+	border-right: 1px solid #2E2121;
+}
+
+#exact_top_menu li a {
+	background-image: url("pics/center_top_menu.gif");
+	height: 31px;
+	display: inline-block;
+	float: left;
+	border-bottom: none;
+	padding: 0px 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+}
+
+#exact_top_menu li a:hover, #exact_top_menu li.current a {
+	background-image: url("pics/center_top_menu_hover.gif");
+	color: #CCCCCC;
+}
+
+/*created span in order to align menu items vertically*/
+span.link {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/*CENTRAL MENU*/
+#central_menu {
+	background-image: url("pics/central_menu.gif");
+	width: 944px;
+	height: 32px;
+}
+
+#central_menu li {
+	list-style-type: none;
+	float: left;
+}
+
+#central_menu li a {
+	border-bottom: none;
+	color: #C7C7D4;
+	font-size: 13px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#central_menu li a:hover {
+	color: white;
+}
+
+#central_menu li span.link2 {
+	margin-top: 7px;
+	display: block;
+}
+
+#central_menu #first_level {
+	margin-left: 70px;
+}
+
+#central_menu span.space {
+	display: inline-block;
+	margin: 5px 10px 0px 10px;
+}
+
+/*MENU ROZWIJANE*/
+#first_level li .second_level {
+	display: none;
+}
+
+#first_level li:hover .second_level {
+	display: block;
+	width: 210px;
+}
+
+#first_level li .second_level li {
+	width: 150px;
+	text-align: left;
+}
+
+#first_level li {
+	position: relative;
+}
+
+#first_level li .second_level {
+	position: absolute;
+	top: 1.9em;
+	left: 0em;
+}
+/*select first li under #first_level **/
+#first_level>li {
+	height: 32px;
+}
+
+#first_level li .second_level {
+	background-color: #0F3250;
+	border-left: 4px solid gray;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	/*	opacity: 0.9;
+	filter: alpha(opacity=90);*/
+}
+
+#first_level li .second_level li {
+	margin-left: 30px;
+	border-top: 1px solid #CCCCCC;
+}
+
+#first_level li .second_level li a {
+	display: block;
+	width: 150px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+#first_level li .second_level li a:hover {
+	background-color: #CCCCCC;
+	padding-left: 20px;
+	margin-left: -20px;
+	padding-right: 20px;
+	margin-top: -1px;
+	border-top: 1px solid #CCCCCC;
+	color: black;
+}
+
+#first_level li .second_level li a {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#first_level li .second_level li.first_menu_element {
+	margin-top: 5px;
+}
+/*]]>*/
+</style>
+</head>
+<body>
+
+	<!-- some browser do not recognize  margin: auto;-->
+	<div align="center">
+		<div id="container">
+
+			<div id="upper_part_of_container">
+				<a href="http://videokurs.pl"> <img class="logo"
+					src="pics/logo.gif" alt="Logo Videokurs.pl" /></a>
+
+				<div id="top_menu">
+					<ul id="exact_top_menu">
+						<li style="border-left: px solid black;" class="current"><a href="#"><span class="link">Video Kursy</span></a></li>
+						<li><a href="#"><span class="link">Darmowe Lekcje</span></a></li>
+						<li><a href="#"><span class="link">Współpraca</span></a></li>
+						<li><a href="#"><span class="link">Forum</span></a></li>
+						<li><a href="#"><span class="link">Blog</span></a></li>
+						<li><a href="#"><span class="link">Sklep</span></a></li>
+
+					</ul>
+
+				</div>
+
+				<div id="contact_box">
+					<table>
+						<tr>
+							<th>Kontakt:</th>
+						</tr>
+						<tr>
+							<td>Esko-Al, 32-700, Bochnia</td>
+						</tr>
+						<tr>
+							<td>ul. Proszowska 92</td>
+						</tr>
+						<tr>
+							<td>tel./kom.: 606 192 567</td>
+						</tr>
+						<tr>
+							<td>tel./fax: (0-14) 611 25 02</td>
+						</tr>
+						<tr>
+							<td>e-mail: <a href="mailto:eskoal@bochnia.pl">eskoal@bochnia.pl</a></td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+			<!-- end of upper_part_of_container div -->
+			
+			<div id="central_menu">
+				<ul id="first_level">
+					<li><a href="#"> <span class="link2">Czym są Video Kursy?</span> </a></li>
+					<li><span class="space">: - :</span></li>
+					<li><a href="#"> <span class="link2">Kursy Tworzenia Stron WWW</span> </a>
+					
+					<ul class="second_level">
+						<li class="first_menu_element"><a href="#">XHTML I CSS</a></li>
+						<li><a href="#">PHP</a></li>
+						<li><a href="#">MySQL</a></li>
+						<li><a href="#">JavaScript</a></li>
+						<li><a href="#">XML i DTD</a></li>
+						<li><a href="#">Smarty</a></li>
+					
+					
+					</ul>
+					
+					</li>
+					<li><span class="space">: - :</span></li>
+					<li><a href="#"> <span class="link2">Kursy Programowania</span> </a>
+					
+					
+					<ul class="second_level">
+						<li class="first_menu_element"><a href="#">C++</a></li>
+						<li><a href="#">C++ - Argorytmy</a></li>
+						<li><a href="#">C++ - Obsługa Plików</a></li>
+						<li><a href="#">Java</a></li>
+						<li><a href="#">Java - Tworzenie Aplikacji</a></li>
+						<li><a href="#">Java - Strumienie</a></li>
+						<li><a href="#">Java - Aspekty Zaawansowane</a></li>
+						<li><a href="#">Pascal</a></li>
+					
+					
+					</ul>
+					
+					
+					</li>
+					<li><span class="space">: - :</span></li>
+					<li><a href="#"> <span class="link2">Kursy Matematyki</span> </a>
+					
+					<ul class="second_level" style="width:150px">
+						<li class="first_menu_element" style="width:100px"><a href="#" style="width:100px">Logika i Zbiory</a></li>
+						<li style="width:100px"><a href="#" style="width:100px">Algebra cz. 1</a></li>
+					    <li style="width:100px"><a href="#" style="width:100px">Algebra cz. 2</a></li>
+					
+					
+					</ul>
+					
+					</li>
+				</ul>
+			</div>
+			
+			<!-- end of central_menu div -->
+			
+		</div>
+		<!-- end of container div -->
+	</div>
+
+</body>
+</html>
+
+
+
