@@ -52,7 +52,6 @@ a:HOVER {
 	/*real size of the image*/
 	width: 944px;
 	height: 113px;
-	background-image: url("pics/top_and_bottom.gif");
 }
 
 #upper_part_of_container a {
@@ -310,6 +309,70 @@ h3 {
 	filter: alpha(opacity = 60);
 }
 
+/*PAGE LOWER PART*/
+#page_lower_part {
+	background-image: url("pics/top_and_bottom.gif");
+	width: 944px;
+	height: 113px;
+	margin-bottom: 10px;
+}
+
+#newsletter_icon {
+	float: left;
+	margin-left: 20px;
+}
+
+#text_newsletter {
+	color: white;
+	text-align: left;
+	padding-top: 15px;
+}
+
+#newsletter_header {
+	font-size: 15px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: bold;
+}
+
+#form_newsletter {
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.input_text {
+	background-color: gray;
+	font-size: 12px;
+}
+
+.submit_button {
+	padding: 5px;
+	font-size: 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	border: 2px outset gray;
+}
+.submit_button:hover {
+	color: green;
+}
+
+.submit_button:active {
+	border: 2px inset gray;
+}
+
+#newsletter_info{
+	font-size: 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin-left: 25px;
+	margin-top: 4px;
+}
+
+#copyright{
+	font-size: 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin-bottom: 10px;
+}
+
 /*]]>*/
 </style>
 </head>
@@ -523,8 +586,35 @@ h3 {
 				<div id="content_lower_part"></div>
 			</div>
 
+			<div id="page_lower_part"> 
+				<img id="newsletter_icon" src="pics/newsletter_icon.gif" alt="Newsletter icon" />
+				<div id="text_newsletter">
+				
+				<div id="newsletter_header">Zapisz się do Newslettera i bądź na bieżąco z nowościami :-)</div>
+					<div id="form_newsletter">
+						<form action="#" method="post">
+							<div>
+								Twój e-mail: <input class="input_text" type="text" name="email" />
+								<input class="submit_button" type="submit" value="Zapisuje się*" />
+							</div>
+						</form>
+					</div>
+					<div id="newsletter_info">
+						*Szanujemy Ciebie i tak samo nie lubimy spamu jak Ty, będziemy
+						informowali Cię tylko o samych nowościach związanych z <em>Video
+							Kursami</em>. W każdym momencie, możesz wypisać się z Newsletera
+						wysyłając do nas e-mail'a. Dla formalności przyciskając button
+						"Zapisuje się*" akceptujesz nasze <a href="#">zasady
+							prywatności</a>.
+					</div>
+				</div>
+			</div>
+		<!-- end of page_lower_part -->
 		</div>
 		<!-- end of container div -->
+		<div id="copyright">
+			&copy; 1983 - 2010, <strong>Esko-Al</strong> created by <em>Arkadiusz Włodarczyk</em>
+		</div>
 	</div>
 
 </body>
