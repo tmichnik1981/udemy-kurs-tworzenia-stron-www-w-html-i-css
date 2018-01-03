@@ -1,0 +1,360 @@
+
+* {
+	/*zeroing out*/
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("../pics/background_page.jpg");
+	background-attachment: fixed;
+	/* 	
+				background-repeat: repeat-x;
+				background-color: #64646c; */
+}
+
+a {
+	color: teal;
+	text-decoration: none;
+	border-bottom: 1px dotted gray;
+}
+
+a:HOVER {
+	color: #06376C;
+}
+
+#container {
+	/*center out*/
+	margin: 0 auto;
+	/*1024 is mostly used resolution*/
+	width: 1004px;
+}
+/*UPPER PART OF A CONTAINER*/
+#upper_part_of_container {
+	position: relative;
+	margin-top: 10px;
+	background-image: url("../pics/top_and_bottom.gif");
+	/*real size of the image*/
+	width: 944px;
+	height: 113px;
+}
+
+#upper_part_of_container a {
+	border-bottom: 0px;
+}
+
+img.logo {
+	border: 0;
+	/*relative to its non static (position cannot be default or static) container*/
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+#contact_box {
+	position: absolute;
+	right: 40px;
+	top: 7px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 11px;
+	color: white;
+	line-height: 125%;
+}
+
+/*TOP MENU*/
+#top_menu {
+	position: absolute;
+	left: 50px;
+	bottom: -1px;
+}
+
+#exact_top_menu li {
+	list-style-type: none;
+	/*lists elements will float one another*/
+	float: left;
+	border-right: 1px solid #2E2121;
+}
+
+#exact_top_menu li a {
+	background-image: url("../pics/center_top_menu.gif");
+	height: 31px;
+	display: inline-block;
+	float: left;
+	border-bottom: none;
+	padding: 0px 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+}
+
+#exact_top_menu li a:hover, #exact_top_menu li.current a {
+	background-image: url("../pics/center_top_menu_hover.gif");
+	color: #CCCCCC;
+}
+
+/*created span in order to align menu items vertically*/
+span.link {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/*CENTRAL MENU*/
+#central_menu {
+	background-image: url("../pics/central_menu.gif");
+	width: 944px;
+	height: 32px;
+}
+
+#central_menu li {
+	list-style-type: none;
+	float: left;
+}
+
+#central_menu li a {
+	border-bottom: none;
+	color: #C7C7D4;
+	font-size: 13px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#central_menu li a:hover {
+	color: white;
+}
+
+#central_menu li span.link2 {
+	margin-top: 7px;
+	display: block;
+}
+
+#central_menu #first_level {
+	margin-left: 70px;
+}
+
+#central_menu span.space {
+	display: inline-block;
+	margin: 5px 10px 0px 10px;
+}
+
+/*MENU ROZWIJANE*/
+#first_level li .second_level {
+	display: none;
+}
+
+#first_level li:hover .second_level {
+	display: block;
+	width: 210px;
+}
+
+#first_level li .second_level li {
+	width: 150px;
+	text-align: left;
+}
+
+#first_level li {
+	position: relative;
+}
+
+#first_level li .second_level {
+	position: absolute;
+	top: 1.9em;
+	left: 0em;
+}
+/*select first li under #first_level **/
+#first_level>li {
+	height: 32px;
+}
+
+#first_level li .second_level {
+	background-color: #0F3250;
+	border-left: 4px solid gray;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	/*	opacity: 0.9;
+	filter: alpha(opacity=90);*/
+}
+
+#first_level li .second_level li {
+	margin-left: 30px;
+	border-top: 1px solid #CCCCCC;
+}
+
+#first_level li .second_level li a {
+	display: block;
+	width: 150px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+
+#first_level li .second_level li a:hover {
+	background-color: #CCCCCC;
+	padding-left: 20px;
+	margin-left: -20px;
+	padding-right: 20px;
+	margin-top: -1px;
+	border-top: 1px solid #CCCCCC;
+	color: black;
+}
+
+#first_level li .second_level li a {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#first_level li .second_level li.first_menu_element {
+	margin-top: 5px;
+}
+
+/*MAIN CONTENT OF A PAGE **/
+#content {
+	width: 944px;
+}
+
+#content_upper_part {
+	background-image: url("../pics/content_upper_part.gif");
+	width: 944px;
+	height: 17px;
+}
+
+#content_central_part {
+	background-image: url("../pics/content_central_part.gif");
+	width: 944px;
+	background-repeat: repeat-y;
+}
+
+#content_lower_part {
+	background-image: url("../pics/content_lower_part.gif");
+	width: 944px;
+	height: 31px;
+}
+
+#text {
+	text-align: justify;
+	padding: 10px 50px;
+	line-height: 140%;
+	font-size: 12px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 18px;
+	text-align: center;
+	color: #0A3C72;
+	margin-bottom: 22px;
+	font-family: Calibri, Tahoma, Arial;
+	font-style: italic;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+h3 {
+	margin-bottom: 15px;
+	color: #0A3C72;
+}
+
+#text ul {
+	margin: 20px;
+	margin-left: 110px;
+	list-style-image: url("../pics/ol.gif");
+}
+
+#text li {
+	margin-bottom: 5px;
+}
+
+#content .side_text {
+	text-align: left;
+	float: right;
+	width: 150px;
+	margin: 10px 20px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	border: 1px dotted gray;
+	padding: 20px 15px;
+	background-image: url("../pics/side_background.jpg");
+}
+
+#content .pictures {
+	width: 300px;
+	float: right;
+	clear: right;
+}
+
+#content .pictures img {
+	float: right;
+	clear: right;
+	margin-right: 30px;
+	margin-top: 30px;
+	cursor: pointer;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+
+/*PAGE LOWER PART*/
+#page_lower_part {
+	background-image: url("../pics/top_and_bottom.gif");
+	width: 944px;
+	height: 113px;
+	margin-bottom: 10px;
+}
+
+#newsletter_icon {
+	float: left;
+	margin-left: 20px;
+}
+
+#text_newsletter {
+	color: white;
+	text-align: left;
+	padding-top: 15px;
+}
+
+#newsletter_header {
+	font-size: 15px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: bold;
+}
+
+#form_newsletter {
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.input_text {
+	background-color: gray;
+	font-size: 12px;
+}
+
+.submit_button {
+	padding: 5px;
+	font-size: 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	cursor: pointer;
+	border: 2px outset gray;
+}
+.submit_button:hover {
+	color: green;
+}
+
+.submit_button:active {
+	border: 2px inset gray;
+}
+
+#newsletter_info{
+	font-size: 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin-left: 25px;
+	margin-top: 4px;
+}
+
+#copyright{
+	font-size: 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	margin-bottom: 10px;
+}

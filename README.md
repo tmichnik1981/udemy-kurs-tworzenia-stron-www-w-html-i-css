@@ -11,6 +11,11 @@
 - [Mime types](http://w3schools.sinsixx.com/media/media_mimeref.asp.htm)
 - [Colors and fonts](http://classic.typetester.org/)
 - [Creating custom patterns for backgrounds](http://repper.studioludens.com/)
+- [html5boilerplate download](https://html5boilerplate.com/)
+- [features supperted by browsers](https://caniuse.com/#)
+- [examples css3 with vendor prefixes](http://css3please.com/)
+- [script adding vendor prefixes](https://leaverou.github.io/prefixfree/)
+- [app testing displaying page in various IE](https://ietester.en.softonic.com/)
 
 #### Notes and Commands
 
@@ -403,7 +408,7 @@
     - bordercolor
   - `<frame>`
     -  src - source page
-    - noresize
+    -  noresize
   - `<noframe>` text to display if our browser cannot handle frame
 
   ```html
@@ -690,5 +695,117 @@
     - hidden - overflowing text wont be displayed
     - auto - will add a scroll
     - scroll
+
+###### CSS3
+
+- boilerplate project interesting elements
+
+  ```html
+  <!-- running IE in edge compatible mode -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- library for checking compability-->
+  <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+
+  <!-- if user user IE < 9 this message is displayed-->
+  <!--[if lte IE 9]>
+   <p class="browserupgrade">You are using an <strong>outdated</strong> browser.
+   Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+   your experience and security.</p>
+  <![endif]-->
+
+  <!-- loading jquery from code.jquery.com/ or from local resources -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+
+  ```
+
+- vendor prefixes - enabling special features before official release
+
+  ```css
+  -moz-border-radius: 10px 5px;
+  -webkit-border-top-left-radius:10px;
+  -o-border-radius: 10px 5px;
+  -khtml-border-top-left-radius: 10px;
+  ```
+
+- to avoid adding prefixes manualy we can  download  `prefixfree.min.js` and ad dthe the page
+
+  ```html
+  <script src="js/vendor/prefixfree.min.js"></script>
+  ```
+
+- IE selectors
+
+  - script enabling in IE 6-9 some css3 properties - http://css3pie.com/documentation/getting-started/
+
+    ```css
+    # download PIE.htc and copy to your project
+    # usage
+    p
+    {
+        width: 500px;
+        background-color: red;
+        padding: 5px;
+        margin: 15px;
+        border-radius: 10px; /* Firefox 16+, IE 10+, Opera 12.10+ */
+
+        behavior: url('../PIE.htc');
+    }
+    ```
+
+  - fixing problems with selectors in older version IE - https://github.com/seancoyne/ie7-js
+
+    ```html
+    <!--[if lt IE 9]>
+    <script src="https://seancoyne.github.io/ie7-js/lib/IE9.js"></script>
+    <![endif]-->
+    ```
+
+- Selectors
+
+  - `p` - select all elements of type `<p>`
+  - `p.foo` - select all element o type `p` having class foo
+  - `#fooId` - selet element with id = fooId
+  - `div, p` - select all `div` and `p` elements
+  - `div p.foo` - select `p` elements with class `foo` being inside some `div`
+  - `div > p.foo`  - select `p` elements with class `foo` being the direct children of some `div`
+  - `div + p.foo` - select `p` elements with class `foo`  being the nearest neighbours of some `div`
+  - `div ~ p.foo` - select `p` elements with class `foo`  being  neighbours of some div
+
+- Attribute selectors
+
+  - `input[required]` - select all `input` elements with attribute `required` 
+  - `[href="twojastrona.pl"]` - select all elements with attribute `href` equals to "twojastrona.pl"
+  - `[href*="twojastrona.pl"]` - select all elements with attribute `href` containing "twojastrona.pl"
+  - `input[type="text"]` - select all text fields
+  - `[id^="product-"]` - select all elements with attribute `id` starting with text "product-"
+  - `[href$=".jpg"]` - select all elements with attribute `href` ending with text "jpg"
+  - `[lang|=en]` - select all elements with attribute `lang` equals any version of English language
+  - `a[data-info~="external"]`- select all `a` elements which attribute  `data-info` have "external" on the list of values
+
+- Pseudo-selectors
+
+  - `input[type='radio']:checked + label` - select labels being the nearest neighbours of checked radio
+
+  - `input[type='text']:focus` - select text inputs which have focus
+
+  - `[data-tootip]:hover:after` - select elements with attribute data-tooltip and 'hand-overed' and display content after those elements 
+
+  - `.download:before` - select elements with class download and add content before
+
+    ```css
+    .download:before
+    {
+        content: url("../img/download.gif");    
+        margin-right: 5px;
+        width: 28px;
+        height: 28px;   
+    }
+    ```
+
+  - `table tr td:first-child` - select tables' cells which are first children
+
+  - `table tr:nth-child(2n) td:first-child` - select `td` elements which are first children of every second row 
 
 #### Instructions
